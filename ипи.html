@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фонды ауыстыру</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            transition: background-color 0.5s ease, color 0.5s ease, background-image 0.5s ease;
+            font-size: 18px;
+            padding: 20px;
+            background-image: url('https://klike.net/uploads/posts/2019-11/1572778653_2.jpg'); /* Алғашқы сурет */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Қараңғы режим стилі */
+        body.dark-mode {
+            background-image: url('https://uprostim.com/wp-content/uploads/2021/04/image057-45-scaled.jpg'); /* Екінші сурет */
+        }
+
+        /* Батырма стилі */
+        #toggle-background {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        #toggle-background:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Фонды ауыстыру</h1>
+    <p>Бұл бетте екі түрлі фон бар. Батырманы басқан кезде фон ауысады.</p>
+
+    <button id="toggle-background">Фонды ауыстыру</button>
+
+    <script>
+        // Фонды ауыстыру үшін батырманы басқанда орындалатын функция
+        const toggleButton = document.querySelector('#toggle-background');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+
+</body>
+</html>
